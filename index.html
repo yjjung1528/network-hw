@@ -3,96 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>컴퓨터네트워크 실습 랜딩페이지</title>
+    <title>Computer Networks - 나만의 과제 사이트</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        /* [개성 추가] 포인트 색상을 여기서 바꾸세요! */
+        :root {
+            --bg-color: #0b1120;       /* 배경색: 다크 네이비 */
+            --point-color: #2dd4bf;    /* 포인트 색상: 민트 (여기서 변경 가능!) */
+            --text-main: #f8fafc;      /* 메인 글씨: 화이트 */
+            --text-sub: #94a3b8;       /* 보조 글씨: 그레이 */
+        }
+
         body {
-            font-family: 'Malgun Gothic', sans-serif;
-            line-height: 1.6;
             margin: 0;
-            padding: 0;
-            background-color: #f4f7f6;
-            color: #333;
+            font-family: 'Inter', 'Noto Sans KR', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            overflow-x: hidden;
         }
-        header {
-            background-color: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 3rem 1rem;
+
+        /* 내비게이션 바 */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 80px;
         }
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-        header p {
-            font-size: 1.2rem;
-            margin-top: 10px;
-            color: #ecf0f1;
-        }
-        .container {
-            max-width: 800px;
-            margin: 30px auto;
-            padding: 20px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        .topic-list {
-            list-style-type: none;
-            padding: 0;
-        }
-        .topic-list li {
-            background: #ecf0f1;
-            margin-bottom: 10px;
-            padding: 15px;
-            border-left: 5px solid #3498db;
-            border-radius: 4px;
-        }
-        .topic-title {
+        .logo {
             font-weight: bold;
-            color: #2980b9;
-            font-size: 1.1rem;
+            color: var(--point-color);
+            font-size: 1.2rem;
         }
-        .footer {
-            text-align: center;
-            margin-top: 30px;
-            padding: 20px;
-            color: #7f8c8d;
+        .menu a {
+            color: var(--text-sub);
+            text-decoration: none;
+            margin-left: 30px;
             font-size: 0.9rem;
+            transition: 0.3s;
         }
+        .menu a:hover { color: var(--point-color); }
+
+        /* 히어로 섹션 */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 80px;
+            min-height: 60vh;
+        }
+        .hero-text { flex: 1; }
+        .hero-graphic { flex: 1; display: flex; justify-content: center; position: relative; }
+
+        .tag {
+            background: rgba(45, 212, 191, 0.1);
+            color: var(--point-color);
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin: 0 0 20px 0;
+        }
+
+        .desc {
+            color: var(--text-sub);
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            max-width: 500px;
+        }
+
+        .btn-group { display: flex; gap: 15px; }
+        .btn {
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .btn-main { background-color: var(--point-color); color: #000; }
+        .btn-main:hover { opacity: 0.8; transform: translateY(-3px); }
+        .btn-sub { border: 1px solid var(--text-sub); color: var(--text-main); }
+        .btn-sub:hover { background: rgba(255,255,255,0.1); }
+
+        /* [개성 추가] 우측 그래픽 공간: 여기에 그림을 넣거나 효과를 줄 수 있어요 */
+        .graphic-box {
+            width: 450px;
+            height: 300px;
+            background: linear-gradient(135deg, rgba(45, 212, 191, 0.2), rgba(0,0,0,0));
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* 하단 수업 소개 */
+        .intro { padding: 80px; }
+        .intro h2 { border-top: 1px solid #1e293b; padding-top: 40px; }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>컴퓨터네트워크</h1>
-        <p>DNS, TCP/IP, HTTP를 실습으로 배우는 수업</p>
-    </header>
+    <nav>
+        <div class="logo">Computer Networks</div>
+        <div class="menu">
+            <a href="#">수업소개</a>
+            <a href="#">학습주제</a>
+            <a href="#">실습</a>
+            <a href="#">유리계획</a>
+        </div>
+    </nav>
 
-    <div class="container">
-        <h2>📚 핵심 학습 주제</h2>
-        <ul class="topic-list">
-            <li>
-                <span class="topic-title">1. DNS (Domain Name System)</span><br>
-                도메인 이름을 IP 주소로 변환하는 계층적 시스템의 동작 원리
-            </li>
-            <li>
-                <span class="topic-title">2. TCP/IP 전송 계층 프로토콜</span><br>
-                신뢰성을 보장하는 TCP와 빠른 전송을 위한 UDP의 차이점 분석
-            </li>
-            <li>
-                <span class="topic-title">3. IP 주소와 서브넷 마스크</span><br>
-                네트워크 대역을 나누고 호스트를 식별하기 위한 서브넷팅 계산 방식
-            </li>
-            <li>
-                <span class="topic-title">4. HTTP 통신 과정</span><br>
-                웹 브라우저와 웹 서버 간의 요청(Request)과 응답(Response) 구조
-            </li>
-        </ul>
+    <div class="hero">
+        <div class="hero-text">
+            <div class="tag">2025 Computer Networks Course</div>
+            <h1>인터넷은 어떻게<br>움직이는가?</h1>
+            <p class="desc">
+                이 수업은 패킷, 주소, 포트, TCP/IP, DNS, HTTP, HTTPS를 이론과 실습으로 이해하는 컴퓨터네트워크 입문 수업입니다.
+            </p>
+            <div class="btn-group">
+                <a href="#" class="btn btn-main">주차별 계획 보기</a>
+                <a href="#" class="btn btn-sub">실습 프로젝트 보기</a>
+            </div>
+        </div>
+        <div class="hero-graphic">
+            <div class="graphic-box">
+                <p style="color: var(--point-color); opacity: 0.5;">[그래픽 일러스트 자리]</p>
+            </div>
+        </div>
     </div>
 
-    <div class="footer">
-        제출자: (정윤재) | 컴퓨터네트워크 미니프로젝트 #2
+    <div class="intro">
+        <h2>수업 소개</h2>
+        <p class="desc">컴퓨터네트워크는 단순히 용어를 외우는 과목이 아닙니다. 브라우저가 서버에 접속하고, 데이터가 패킷으로 나뉘어 이동하며, TCP/IP가 어떻게 정밀하게 작동하는지 직접 관찰하고 구현해 보는 과정입니다.</p>
     </div>
 
 </body>
 </html>
+
+질문자님이 그리신 **그림을 지금 바로 올려주시면**, 그 그림의 배치와 색감에 맞춰서 위 코드를 완벽하게 개조해 드릴게요! 2일 마감이면 충분합니다. 어서 보여주세요! 😊
