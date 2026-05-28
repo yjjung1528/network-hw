@@ -2,51 +2,33 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chinesische Küche - 중화요리 역사</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <title>중화요리의 유래 - Chinesische Küche</title>
     <style>
-        :root { --primary: #2C1E16; --accent: #D62828; --bg: #FDFBF7; --text: #333333; }
-        body { margin: 0; font-family: 'Noto Sans KR', sans-serif; background-color: var(--bg); color: var(--text); }
-        a { text-decoration: none; color: inherit; }
-        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 50px; background: #ffffff; box-shadow: 0 2px 15px rgba(0,0,0,0.05); }
-        .logo { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 900; color: var(--primary); }
+        :root { --primary: #2C1E16; --accent: #D62828; --bg: #FDFBF7; }
+        body { margin: 0; font-family: 'Noto Sans KR', sans-serif; background-color: var(--bg); line-height: 1.8; }
+        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 60px; background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .logo { font-size: 1.8rem; font-weight: 900; color: var(--primary); text-decoration: none; }
         .logo span { color: var(--accent); }
-        .nav-menu { display: flex; gap: 40px; font-weight: 700; }
-        .nav-menu a.active { color: var(--accent); }
-
-        section { padding: 60px 20px; max-width: 900px; margin: 0 auto; line-height: 1.8; }
-        .section-title { font-size: 2.5rem; color: var(--primary); margin-bottom: 30px; font-weight: 900; text-align: center; }
-        .intro-img { width: 100%; height: 400px; object-fit: cover; border-radius: 15px; margin-bottom: 40px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-        h3 { font-size: 1.6rem; color: var(--accent); margin-top: 40px; border-left: 4px solid var(--accent); padding-left: 15px; }
-        p { font-size: 1.1rem; color: #444; text-align: justify; }
+        nav a { margin-left: 40px; text-decoration: none; font-weight: 700; color: var(--primary); }
+        .container { max-width: 900px; margin: 60px auto; padding: 0 20px; }
+        h1 { font-size: 2.8rem; color: var(--primary); text-align: center; margin-bottom: 50px; }
+        .main-img { width: 100%; height: 450px; object-fit: cover; border-radius: 20px; margin-bottom: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        h3 { color: var(--accent); font-size: 1.8rem; margin-top: 50px; border-left: 6px solid var(--accent); padding-left: 20px; }
+        p { font-size: 1.2rem; color: #444; text-align: justify; }
     </style>
 </head>
 <body>
-
     <header>
-        <div class="logo">Chinesische <span>Küche</span></div>
-        <nav class="nav-menu">
-            <a href="history.html" class="active">중화요리</a>
-            <a href="menu.html">메뉴소개</a>
-            <a href="spots.html">주변 맛집</a>
-        </nav>
+        <a href="index.html" class="logo">uno sportello <span>unico</span></a>
+        <nav><a href="history.html" style="color:var(--accent)">중화요리</a><a href="menu.html">메뉴소개</a><a href="spots.html">주변 맛집</a></nav>
     </header>
-
-    <section>
-        <h2 class="section-title">중화요리의 유래와 문화</h2>
-        <img src="https://images.unsplash.com/photo-1525755662778-989d0524087e?auto=format&fit=crop&q=80&w=800" class="intro-img" alt="중화요리">
-        
-        <h3>1. 한국식 중화요리의 역사적 탄생</h3>
-        <p>
-            한국에서 즐겨 먹는 중화요리는 19세기 후반 인천 개항장을 통해 유입된 중국 산둥성 출신의 화교 문화에 뿌리를 두고 있습니다. 초기 화교들은 주로 부두 노동자들을 타깃으로 신속하고 저렴하게 한 끼를 해결할 수 있는 노포를 열었고, 이것이 수십 년간 다듬어지며 독자적인 영역을 구축하게 되었습니다.
-        </p>
-
-        <h3>2. 철저한 현지화와 발전 과정</h3>
-        <p>
-            본토 중화요리의 강한 향신료와 기름진 조리법을 한국인의 입맛에 맞춰 과감히 변형시켰습니다. 춘장을 볶을 때 캐러멜 소스를 가미해 부드럽고 달콤한 맛을 극대화한 한국식 짜장면, 고기튀김에 달콤새콤한 소스를 부어 내는 한국식 탕수육 등이 대표적입니다. 오늘날 중화요리는 단순한 외식을 넘어 한국인의 소울푸드로 완벽하게 안착했습니다.
-        </p>
-    </section>
-
+    <div class="container">
+        <h1>중화요리의 유래와 역사</h1>
+        <img src="http://googleusercontent.com/image_collection/image_retrieval/14263758978203969539" class="main-img">
+        <h3>1. 한국식 중화요리의 탄생</h3>
+        <p>1883년 인천 개항장으로부터 시작된 중화요리는 산둥성 출신 화교들에 의해 정착되었습니다. 처음에는 고향의 음식을 팔기 시작했으나, 점차 한국인의 입맛에 맞는 '달콤함'과 '감칠맛'이 더해지며 우리만의 독특한 문화가 탄생했습니다.</p>
+        <h3>2. 어떻게 만들어졌는가</h3>
+        <p>강한 불의 화력(웍)을 이용해 야채와 고기를 빠르게 볶아내어 영양소 파괴를 줄이고 풍미를 극대화하는 것이 특징입니다. 특히 춘장이라는 독특한 발효 소스를 활용해 검은색 소스를 만들어낸 짜장면은 세계 어디에도 없는 한국만의 창의적인 결과물입니다.</p>
+    </div>
 </body>
 </html>

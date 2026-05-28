@@ -2,85 +2,42 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chinesische Küche - 메뉴소개</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <title>메뉴소개 - Chinesische Küche</title>
     <style>
-        :root { --primary: #2C1E16; --accent: #D62828; --bg: #FDFBF7; --text: #333333; }
-        body { margin: 0; font-family: 'Noto Sans KR', sans-serif; background-color: var(--bg); color: var(--text); }
-        a { text-decoration: none; color: inherit; }
-        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 50px; background: #ffffff; box-shadow: 0 2px 15px rgba(0,0,0,0.05); }
-        .logo { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 900; color: var(--primary); }
+        :root { --primary: #2C1E16; --accent: #D62828; --bg: #FDFBF7; }
+        body { margin: 0; font-family: 'Noto Sans KR', sans-serif; background-color: var(--bg); }
+        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 60px; background: #fff; }
+        .logo { font-size: 1.8rem; font-weight: 900; color: var(--primary); text-decoration: none; }
         .logo span { color: var(--accent); }
-        .nav-menu { display: flex; gap: 40px; font-weight: 700; }
-        .nav-menu a.active { color: var(--accent); }
-
-        .container { padding: 60px 20px; max-width: 1200px; margin: 0 auto; }
-        .title { text-align: center; font-size: 2.5rem; color: var(--primary); margin-bottom: 50px; font-weight: 900; }
-        
-        .menu-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 35px; }
-        .menu-card { background: #ffffff; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); transition: 0.3s; text-align: center;}
-        .menu-card:hover { transform: translateY(-8px); }
-        .menu-img { width: 100%; height: 220px; object-fit: cover; }
-        .menu-info { padding: 25px; }
-        .menu-info h3 { margin: 0 0 15px 0; font-size: 1.4rem; color: var(--primary); }
-        .detail-btn { display: inline-block; padding: 10px 25px; background: var(--accent); color: white; border-radius: 5px; font-weight: bold; font-size: 0.9rem; transition: 0.2s;}
-        .detail-btn:hover { background: #a31e1e; }
+        nav a { margin-left: 40px; text-decoration: none; font-weight: 700; color: var(--primary); }
+        .container { max-width: 1200px; margin: 60px auto; padding: 0 20px; }
+        .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+        .card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.05); text-align: center; transition: 0.3s; }
+        .card:hover { transform: translateY(-10px); }
+        .card img { width: 100%; height: 250px; object-fit: cover; }
+        .card-info { padding: 25px; }
+        .card-info h3 { margin: 0 0 15px 0; color: var(--primary); }
+        .btn { display: inline-block; padding: 10px 30px; background: var(--accent); color: white; border-radius: 5px; text-decoration: none; font-weight: bold; }
     </style>
 </head>
 <body>
-
     <header>
-        <div class="logo">Chinesische <span>Küche</span></div>
-        <nav class="nav-menu">
-            <a href="history.html">중화요리</a>
-            <a href="menu.html" class="active">메뉴소개</a>
-            <a href="spots.html">주변 맛집</a>
-        </nav>
+        <a href="index.html" class="logo">uno sportello <span>unico</span></a>
+        <nav><a href="history.html">중화요리</a><a href="menu.html" style="color:var(--accent)">메뉴소개</a><a href="spots.html">주변 맛집</a></nav>
     </header>
-
     <div class="container">
-        <h2 class="title">대표 메뉴 9선</h2>
-        
-        <div class="menu-grid">
-            <div class="menu-card">
-                <img src="https://images.unsplash.com/photo-1617093727343-374698b1b08d?auto=format&fit=crop&q=80&w=400" class="menu-img" alt="짜장면">
-                <div class="menu-info"><h3>짜장면</h3><a href="jjajang.html" class="detail-btn">재료 및 특징</a></div>
-            </div>
-            <div class="menu-card">
-                <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&q=80&w=400" class="menu-img" alt="짬뽕">
-                <div class="menu-info"><h3>짬뽕</h3><a href="jjamppong.html" class="detail-btn">재료 및 특징</a></div>
-            </div>
-            <div class="menu-card">
-                <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=400" class="menu-img" alt="탕수육">
-                <div class="menu-info"><h3>탕수육</h3><a href="tangsuyuk.html" class="detail-btn">재료 및 특징</a></div>
-            </div>
-            <div class="menu-card">
-                <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&q=80&w=400" class="menu-img" alt="볶음밥">
-                <div class="menu-info"><h3>볶음밥</h3><a href="friedrice.html" class="detail-btn">재료 및 특징</a></div>
-            </div>
-            <div class="menu-card">
-                <img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&q=80&w=400" class="menu-img" alt="잡채밥">
-                <div class="menu-info"><h3>잡채밥</h3><a href="japchaebap.html" class="detail-btn">재료 및 특징</a></div>
-            </div>
-            <div class="menu-card">
-                <img src="https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&q=80&w=400" class="menu-img" alt="깐풍기">
-                <div class="menu-info"><h3>깐풍기</h3><a href="kkanpunggi.html" class="detail-btn">재료 및 특징</a></div>
-            </div>
-            <div class="menu-card">
-                <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&q=80&w=400" class="menu-img" alt="양장피">
-                <div class="menu-info"><h3>양장피</h3><a href="yangjangpi.html" class="detail-btn">재료 및 특징</a></div>
-            </div>
-            <div class="menu-card">
-                <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&q=80&w=400" class="menu-img" alt="라조육">
-                <div class="menu-info"><h3>라조육</h3><a href="lajoyuk.html" class="detail-btn">재료 및 특징</a></div>
-            </div>
-            <div class="menu-card">
-                <img src="https://images.unsplash.com/photo-1551248429-40975aa4de74?auto=format&fit=crop&q=80&w=400" class="menu-img" alt="깐쇼새우">
-                <div class="menu-info"><h3>깐쇼새우</h3><a href="shrimp.html" class="detail-btn">재료 및 특징</a></div>
-            </div>
+        <h1 style="text-align: center; margin-bottom: 50px;">대표 메뉴 9선</h1>
+        <div class="grid">
+            <div class="card"><img src="https://images.unsplash.com/photo-1617093727343-374698b1b08d?q=80&w=400" alt="짜장면"><div class="card-info"><h3>짜장면</h3><a href="jjajang.html" class="btn">상세 보기</a></div></div>
+            <div class="card"><img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?q=80&w=400" alt="짬뽕"><div class="card-info"><h3>짬뽕</h3><a href="jjamppong.html" class="btn">상세 보기</a></div></div>
+            <div class="card"><img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=400" alt="탕수육"><div class="card-info"><h3>탕수육</h3><a href="tangsuyuk.html" class="btn">상세 보기</a></div></div>
+            <div class="card"><img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?q=80&w=400" alt="볶음밥"><div class="card-info"><h3>볶음밥</h3><a href="friedrice.html" class="btn">상세 보기</a></div></div>
+            <div class="card"><img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?q=80&w=400" alt="잡채밥"><div class="card-info"><h3>잡채밥</h3><a href="japchaebap.html" class="btn">상세 보기</a></div></div>
+            <div class="card"><img src="https://images.unsplash.com/photo-1562967914-608f82629710?q=80&w=400" alt="깐풍기"><div class="card-info"><h3>깐풍기</h3><a href="kkanpunggi.html" class="btn">상세 보기</a></div></div>
+            <div class="card"><img src="https://images.unsplash.com/photo-1547592180-85f173990554?q=80&w=400" alt="양장피"><div class="card-info"><h3>양장피</h3><a href="yangjangpi.html" class="btn">상세 보기</a></div></div>
+            <div class="card"><img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?q=80&w=400" alt="라조육"><div class="card-info"><h3>라조육</h3><a href="lajoyuk.html" class="btn">상세 보기</a></div></div>
+            <div class="card"><img src="https://images.unsplash.com/photo-1551248429-40975aa4de74?q=80&w=400" alt="깐쇼새우"><div class="card-info"><h3>깐쇼새우</h3><a href="shrimp.html" class="btn">상세 보기</a></div></div>
         </div>
     </div>
-
 </body>
 </html>

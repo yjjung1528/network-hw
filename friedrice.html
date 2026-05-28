@@ -2,33 +2,31 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8"><title>Chinesische Küche - 볶음밥</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         :root { --primary: #2C1E16; --accent: #D62828; --bg: #FDFBF7; }
         body { margin: 0; font-family: 'Noto Sans KR', sans-serif; background-color: var(--bg); }
-        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 50px; background: #ffffff; box-shadow: 0 2px 15px rgba(0,0,0,0.05); }
-        .logo { font-size: 1.8rem; font-weight: 900; color: var(--primary); } .logo span { color: var(--accent); }
-        .container { padding: 50px 20px; max-width: 800px; margin: 0 auto; }
-        .back-btn { display: inline-block; margin-bottom: 25px; color: var(--accent); font-weight: bold; text-decoration: none; }
-        .food-box { background: white; padding: 40px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); }
-        .food-img { width: 100%; height: 350px; object-fit: cover; border-radius: 10px; margin-bottom: 30px; }
-        h2 { color: var(--primary); border-left: 5px solid var(--accent); padding-left: 15px; margin: 0 0 20px 0; }
-        .list { display: grid; grid-template-columns: 1fr; gap: 15px; }
-        .item { background: #f9f9f9; padding: 20px; border-radius: 8px; border: 1px solid #eee; }
+        header { padding: 20px 60px; background: #fff; text-align: center; }
+        .logo { font-size: 1.8rem; font-weight: 900; color: var(--primary); text-decoration: none; }
+        .container { max-width: 800px; margin: 50px auto; background: white; padding: 50px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .food-img { width: 100%; height: 400px; object-fit: cover; border-radius: 15px; margin-bottom: 30px; }
+        h1 { color: var(--primary); border-left: 6px solid var(--accent); padding-left: 20px; }
+        .info-box { background: #f9f9f9; padding: 25px; border-radius: 10px; margin-top: 20px; }
+        .back { display: block; text-align: center; margin-top: 40px; color: var(--accent); font-weight: bold; text-decoration: none; }
     </style>
 </head>
 <body>
-    <header><div class="logo">Chinesische <span>Küche</span></div></header>
+    <header><a href="index.html" class="logo">uno sportello <span style="color:var(--accent)">unico</span></a></header>
     <div class="container">
-        <a href="menu.html" class="back-btn">&larr; 메뉴판으로 돌아가기</a>
-        <div class="food-box">
-            <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&q=80&w=800" class="food-img" alt="볶음밥">
-            <h2>중화 볶음밥 (Fried Rice)</h2>
-            <div class="list">
-                <div class="item"><strong>핵심 식재료:</strong> 고슬고슬하게 수분을 날린 흰밥, 신선한 계란, 다진 파, 당근, 알새우</div>
-                <div class="item"><strong>요리 특징:</strong> 밥알 하나하나 기름 코팅을 입히듯이 센 불에 빠르게 국자와 웍을 이용해 볶아내어, 불향 가득 고소 담백함의 극치를 보여주는 대표 밥류 메뉴입니다.</div>
-            </div>
+        <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?q=80&w=800" class="food-img">
+        <h1>고슬고슬함의 극치, 볶음밥</h1>
+        <p>밥알 하나하나 기름 코팅을 입힌 정통 중식 볶음밥입니다. 파기름의 향긋함과 계란의 고소함이 입안 가득 퍼집니다.</p>
+        <div class="info-box">
+            <h3>핵심 식재료</h3>
+            <p>✔ 고슬고슬한 찬밥, ✔ 신선한 계란, ✔ 다진 대파, ✔ 중화 불맛</p>
+            <h3>셰프의 팁</h3>
+            <p>볶음밥은 웍에서 밥알이 춤을 추듯 볶아낼 때 수분이 날아가 최상의 식감을 자랑합니다.</p>
         </div>
+        <a href="menu.html" class="back">← 메뉴판으로 돌아가기</a>
     </div>
 </body>
 </html>

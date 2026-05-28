@@ -2,33 +2,31 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8"><title>Chinesische Küche - 라조육</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         :root { --primary: #2C1E16; --accent: #D62828; --bg: #FDFBF7; }
         body { margin: 0; font-family: 'Noto Sans KR', sans-serif; background-color: var(--bg); }
-        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 50px; background: #ffffff; box-shadow: 0 2px 15px rgba(0,0,0,0.05); }
-        .logo { font-size: 1.8rem; font-weight: 900; color: var(--primary); } .logo span { color: var(--accent); }
-        .container { padding: 50px 20px; max-width: 800px; margin: 0 auto; }
-        .back-btn { display: inline-block; margin-bottom: 25px; color: var(--accent); font-weight: bold; text-decoration: none; }
-        .food-box { background: white; padding: 40px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); }
-        .food-img { width: 100%; height: 350px; object-fit: cover; border-radius: 10px; margin-bottom: 30px; }
-        h2 { color: var(--primary); border-left: 5px solid var(--accent); padding-left: 15px; margin: 0 0 20px 0; }
-        .list { display: grid; grid-template-columns: 1fr; gap: 15px; }
-        .item { background: #f9f9f9; padding: 20px; border-radius: 8px; border: 1px solid #eee; }
+        header { padding: 20px 60px; background: #fff; text-align: center; }
+        .logo { font-size: 1.8rem; font-weight: 900; color: var(--primary); text-decoration: none; }
+        .container { max-width: 800px; margin: 50px auto; background: white; padding: 50px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .food-img { width: 100%; height: 400px; object-fit: cover; border-radius: 15px; margin-bottom: 30px; }
+        h1 { color: var(--primary); border-left: 6px solid var(--accent); padding-left: 20px; }
+        .info-box { background: #f9f9f9; padding: 25px; border-radius: 10px; margin-top: 20px; }
+        .back { display: block; text-align: center; margin-top: 40px; color: var(--accent); font-weight: bold; text-decoration: none; }
     </style>
 </head>
 <body>
-    <header><div class="logo">Chinesische <span>Küche</span></div></header>
+    <header><a href="index.html" class="logo">uno sportello <span style="color:var(--accent)">unico</span></a></header>
     <div class="container">
-        <a href="menu.html" class="back-btn">&larr; 메뉴판으로 돌아가기</a>
-        <div class="food-box">
-            <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&q=80&w=800" class="food-img" alt="라조육">
-            <h2>라조육 (Lajoyuk)</h2>
-            <div class="list">
-                <div class="item"><strong>핵심 식재료:</strong> 한돈 돼지고기 튀김, 죽순 편, 청경채, 표고버섯, 사천 두반장 매콤소스</div>
-                <div class="item"><strong>요리 특징:</strong> 탕수육과 달리 단맛을 배제하고 한자 '고추 랄(辣)' 자를 써서 고추기름과 중국식 고추장인 두반장 소스로 걸쭉하게 볶아내어, 밥 반찬 및 안주로 제격인 요리입니다.</div>
-            </div>
+        <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?q=80&w=800" class="food-img">
+        <h1>중후한 매콤함, 라조육</h1>
+        <p>돼지고기 튀김에 죽순, 표고버섯 등을 넣고 매콤한 두반장 소스로 볶아냈습니다. 탕수육과는 또 다른 묵직하고 매운맛이 특징입니다.</p>
+        <div class="info-box">
+            <h3>핵심 식재료</h3>
+            <p>✔ 돼지고기 등심, ✔ 죽순 & 표고, ✔ 사천 두반장, ✔ 고추기름</p>
+            <h3>어원</h3>
+            <p>'라'는 맵다, '조'는 고추를 뜻합니다. 말 그대로 고추를 넣어 볶은 고기 요리를 의미합니다.</p>
         </div>
+        <a href="menu.html" class="back">← 메뉴판으로 돌아가기</a>
     </div>
 </body>
 </html>
