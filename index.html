@@ -3,150 +3,240 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Computer Networks - 나만의 과제 사이트</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    <title>uno sportello unico - 프리미엄 짜장</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
     <style>
-        /* [개성 추가] 포인트 색상을 여기서 바꾸세요! */
+        /* --- 색상 및 기본 설정 --- */
         :root {
-            --bg-color: #0b1120;       /* 배경색: 다크 네이비 */
-            --point-color: #2dd4bf;    /* 포인트 색상: 민트 (여기서 변경 가능!) */
-            --text-main: #f8fafc;      /* 메인 글씨: 화이트 */
-            --text-sub: #94a3b8;       /* 보조 글씨: 그레이 */
+            --primary-color: #2C1E16; /* 춘장 딥 브라운 */
+            --accent-color: #D62828;  /* 식욕을 돋우는 차이나 레드 */
+            --bg-color: #FDFBF7;      /* 부드러운 면발 크림색 */
+            --text-main: #333333;
+            --text-light: #666666;
         }
 
         body {
             margin: 0;
-            font-family: 'Inter', 'Noto Sans KR', sans-serif;
+            font-family: 'Noto Sans KR', sans-serif;
             background-color: var(--bg-color);
             color: var(--text-main);
             overflow-x: hidden;
         }
+        
+        a { text-decoration: none; color: inherit; }
 
-        /* 내비게이션 바 */
-        nav {
+        /* --- 상단 내비게이션 바 (Header) --- */
+        header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 80px;
+            padding: 20px 50px;
+            background: #ffffff;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
+
+        /* 왼쪽 상단 홈페이지 이름 */
         .logo {
-            font-weight: bold;
-            color: var(--point-color);
-            font-size: 1.2rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: var(--primary-color);
+            letter-spacing: -0.5px;
         }
-        .menu a {
-            color: var(--text-sub);
-            text-decoration: none;
-            margin-left: 30px;
-            font-size: 0.9rem;
+        .logo span { color: var(--accent-color); }
+
+        /* 메뉴바 */
+        .nav-menu {
+            display: flex;
+            gap: 40px;
+            font-weight: 700;
+            font-size: 1.05rem;
+        }
+        .nav-menu a:hover {
+            color: var(--accent-color);
             transition: 0.3s;
         }
-        .menu a:hover { color: var(--point-color); }
 
-        /* 히어로 섹션 */
+        /* --- 메인 히어로 배너 --- */
         .hero {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 80px;
-            min-height: 60vh;
+            background-color: var(--primary-color);
+            color: #ffffff;
+            padding: 140px 20px;
+            text-align: center;
+            background-image: linear-gradient(rgba(44, 30, 22, 0.9), rgba(44, 30, 22, 0.9)), url('https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&q=80');
+            background-size: cover;
+            background-position: center;
         }
-        .hero-text { flex: 1; }
-        .hero-graphic { flex: 1; display: flex; justify-content: center; position: relative; }
+        .hero h1 {
+            font-size: 4rem;
+            margin: 0 0 20px 0;
+            font-family: 'Playfair Display', serif;
+        }
+        .hero p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            font-weight: 400;
+        }
 
-        .tag {
-            background: rgba(45, 212, 191, 0.1);
-            color: var(--point-color);
-            padding: 6px 15px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: bold;
-            display: inline-block;
+        /* --- 공통 섹션 스타일 --- */
+        section {
+            padding: 100px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-weight: 900;
+        }
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            font-size: 1.1rem;
+            margin-bottom: 60px;
+        }
+
+        /* --- 1. 짜장 소개 (2단 분할 레이아웃) --- */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        .intro-text h3 {
+            font-size: 1.8rem;
+            color: var(--accent-color);
             margin-bottom: 20px;
         }
-
-        h1 {
-            font-size: 3.5rem;
-            line-height: 1.2;
-            margin: 0 0 20px 0;
-        }
-
-        .desc {
-            color: var(--text-sub);
+        .intro-text p {
             font-size: 1.1rem;
-            line-height: 1.6;
-            margin-bottom: 40px;
-            max-width: 500px;
+            line-height: 1.8;
+            color: var(--text-light);
+            margin-bottom: 20px;
         }
-
-        .btn-group { display: flex; gap: 15px; }
-        .btn {
-            padding: 15px 30px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-        .btn-main { background-color: var(--point-color); color: #000; }
-        .btn-main:hover { opacity: 0.8; transform: translateY(-3px); }
-        .btn-sub { border: 1px solid var(--text-sub); color: var(--text-main); }
-        .btn-sub:hover { background: rgba(255,255,255,0.1); }
-
-        /* [개성 추가] 우측 그래픽 공간: 여기에 그림을 넣거나 효과를 줄 수 있어요 */
-        .graphic-box {
-            width: 450px;
-            height: 300px;
-            background: linear-gradient(135deg, rgba(45, 212, 191, 0.2), rgba(0,0,0,0));
+        .image-placeholder {
+            background: #E8E3D9;
             border-radius: 20px;
-            border: 1px solid rgba(255,255,255,0.1);
-            backdrop-filter: blur(10px);
+            height: 400px;
             display: flex;
             align-items: center;
             justify-content: center;
+            color: #A39C89;
+            font-weight: bold;
+            font-size: 1.2rem;
+            border: 2px dashed #C5BEAD;
         }
 
-        /* 하단 수업 소개 */
-        .intro { padding: 80px; }
-        .intro h2 { border-top: 1px solid #1e293b; padding-top: 40px; }
+        /* --- 2. 짜장 재료 (3단 카드 레이아웃) --- */
+        .ingredients-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .card {
+            background: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        .card h4 {
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        .card p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* --- 푸터 (하단 바) --- */
+        footer {
+            background: var(--primary-color);
+            color: rgba(255,255,255,0.6);
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 50px;
+            font-size: 0.9rem;
+        }
     </style>
 </head>
 <body>
 
-    <nav>
-        <div class="logo">Computer Networks</div>
-        <div class="menu">
-            <a href="#">수업소개</a>
-            <a href="#">학습주제</a>
-            <a href="#">실습</a>
-            <a href="#">유리계획</a>
-        </div>
-    </nav>
+    <header>
+        <div class="logo">uno sportello <span>unico</span></div>
+        <nav class="nav-menu">
+            <a href="#intro">짜장 소개</a>
+            <a href="#ingredients">짜장 재료</a>
+            <a href="#">메뉴 안내</a>
+            <a href="#">오시는 길</a>
+        </nav>
+    </header>
 
     <div class="hero">
-        <div class="hero-text">
-            <div class="tag">2025 Computer Networks Course</div>
-            <h1>인터넷은 어떻게<br>움직이는가?</h1>
-            <p class="desc">
-                이 수업은 패킷, 주소, 포트, TCP/IP, DNS, HTTP, HTTPS를 이론과 실습으로 이해하는 컴퓨터네트워크 입문 수업입니다.
-            </p>
-            <div class="btn-group">
-                <a href="#" class="btn btn-main">주차별 계획 보기</a>
-                <a href="#" class="btn btn-sub">실습 프로젝트 보기</a>
-            </div>
-        </div>
-        <div class="hero-graphic">
-            <div class="graphic-box">
-                <p style="color: var(--point-color); opacity: 0.5;">[그래픽 일러스트 자리]</p>
-            </div>
-        </div>
+        <h1>Perfect Jjajang</h1>
+        <p>세상에 단 하나뿐인 완벽한 짜장면을 만나는 창구</p>
     </div>
 
-    <div class="intro">
-        <h2>수업 소개</h2>
-        <p class="desc">컴퓨터네트워크는 단순히 용어를 외우는 과목이 아닙니다. 브라우저가 서버에 접속하고, 데이터가 패킷으로 나뉘어 이동하며, TCP/IP가 어떻게 정밀하게 작동하는지 직접 관찰하고 구현해 보는 과정입니다.</p>
-    </div>
+    <section id="intro">
+        <h2 class="section-title">짜장 소개</h2>
+        <p class="section-subtitle">전통의 맛을 현대적으로 재해석하다</p>
+        
+        <div class="grid-2">
+            <div class="intro-text">
+                <h3>오직 한 그릇을 위한 타협 없는 고집</h3>
+                <p>
+                    'uno sportello unico(단 하나의 창구)'라는 이름처럼, 저희는 고객님께 완벽한 중식 경험을 제공하는 유일한 목적지가 되고자 합니다.
+                </p>
+                <p>
+                    수백 번의 웍질 끝에 탄생하는 불향 가득한 춘장, 매일 아침 직접 반죽하여 뽑아내는 쫄깃한 생면. 평범한 짜장면이 아닌, 기억에 남는 하나의 요리를 대접합니다.
+                </p>
+            </div>
+            <div class="image-placeholder">
+                [ 먹음직스러운 짜장면 조리 사진 자리 ]
+            </div>
+        </div>
+    </section>
+
+    <section id="ingredients">
+        <h2 class="section-title">짜장 재료</h2>
+        <p class="section-subtitle">최상의 맛은 가장 신선한 식재료에서 시작됩니다</p>
+
+        <div class="ingredients-grid">
+            <div class="card">
+                <div class="card-icon">🥩</div>
+                <h4>1등급 한돈</h4>
+                <p>냉동육이 아닌 매일 아침 들여오는 신선한 1등급 국내산 생돼지고기만을 큼직하게 썰어 넣어 풍부한 육즙을 자랑합니다.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🧅</div>
+                <h4>무안 햇양파</h4>
+                <p>단맛이 강하고 수분이 풍부한 무안산 햇양파를 센 불에 빠르게 볶아내어 춘장의 짠맛을 중화하고 자연스러운 감칠맛을 냅니다.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🫘</div>
+                <h4>숙성 춘장</h4>
+                <p>일반 춘장이 아닌 100일 이상 저온 숙성시킨 특제 비법 춘장을 사용하여, 텁텁함 없이 깊고 진한 풍미를 완성합니다.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2026 uno sportello unico. All rights reserved. | 대표자: 창원시 1등 셰프
+    </footer>
 
 </body>
 </html>
-
-질문자님이 그리신 **그림을 지금 바로 올려주시면**, 그 그림의 배치와 색감에 맞춰서 위 코드를 완벽하게 개조해 드릴게요! 2일 마감이면 충분합니다. 어서 보여주세요! 😊
