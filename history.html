@@ -2,33 +2,49 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>중화요리의 유래 - Chinesische Küche</title>
+    <title>Chinesische Küche - 역사</title>
     <style>
-        :root { --primary: #2C1E16; --accent: #D62828; --bg: #FDFBF7; }
-        body { margin: 0; font-family: 'Noto Sans KR', sans-serif; background-color: var(--bg); line-height: 1.8; }
-        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 60px; background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
-        .logo { font-size: 1.8rem; font-weight: 900; color: var(--primary); text-decoration: none; }
-        .logo span { color: var(--accent); }
-        nav a { margin-left: 40px; text-decoration: none; font-weight: 700; color: var(--primary); }
-        .container { max-width: 900px; margin: 60px auto; padding: 0 20px; }
-        h1 { font-size: 2.8rem; color: var(--primary); text-align: center; margin-bottom: 50px; }
-        .main-img { width: 100%; height: 450px; object-fit: cover; border-radius: 20px; margin-bottom: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-        h3 { color: var(--accent); font-size: 1.8rem; margin-top: 50px; border-left: 6px solid var(--accent); padding-left: 20px; }
-        p { font-size: 1.2rem; color: #444; text-align: justify; }
+        body { margin: 0; font-family: 'Malgun Gothic', sans-serif; background: #111; color: #ddd; line-height: 1.8; }
+        a { text-decoration: none; color: inherit; }
+        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 60px; background: #000; border-bottom: 1px solid #D62828; }
+        .logo { font-size: 2rem; font-weight: bold; color: #fff; } .logo span { color: #D62828; }
+        nav { display: flex; gap: 40px; font-weight: bold; } nav a.active { color: #D62828; }
+        .container { max-width: 900px; margin: 50px auto; padding: 0 20px; }
+        h1 { font-size: 3rem; text-align: center; margin-bottom: 40px; color: #fff; }
+        .box { background: #1a1a1a; padding: 40px; border-radius: 15px; margin-bottom: 30px; border-left: 5px solid #D62828; }
+        .box h3 { color: #D62828; font-size: 1.5rem; margin-top: 0; }
+        img { width: 100%; height: 400px; object-fit: cover; border-radius: 15px; margin-bottom: 30px; }
     </style>
 </head>
 <body>
     <header>
         <a href="index.html" class="logo">Chinesische <span>Küche</span></a>
-        <nav><a href="history.html" style="color:var(--accent)">중화요리</a><a href="menu.html">메뉴소개</a><a href="spots.html">주변 맛집</a></nav>
+        <nav><a href="history.html" class="active">중화요리</a><a href="menu.html">메뉴소개</a><a href="spots.html">주변 맛집</a></nav>
     </header>
     <div class="container">
-        <h1>중화요리의 유래와 역사</h1>
-        <img src="https://love.seoul.go.kr/tmda/editor/article/2024/03/25/article_202403_07_01.jpg" class="main-img">
-        <h3>1. 한국식 중화요리의 탄생</h3>
-        <p>1883년 인천 개항장으로부터 시작된 중화요리는 산둥성 출신 화교들에 의해 정착되었습니다. 처음에는 고향의 음식을 팔기 시작했으나, 점차 한국인의 입맛에 맞는 '달콤함'과 '감칠맛'이 더해지며 우리만의 독특한 문화가 탄생했습니다.</p>
-        <h3>2. 어떻게 만들어졌는가</h3>
-        <p>강한 불의 화력(웍)을 이용해 야채와 고기를 빠르게 볶아내어 영양소 파괴를 줄이고 풍미를 극대화하는 것이 특징입니다. 특히 춘장이라는 독특한 발효 소스를 활용해 검은색 소스를 만들어낸 짜장면은 세계 어디에도 없는 한국만의 창의적인 결과물입니다.</p>
+        <h1>중화요리의 역사와 문화</h1>
+        <img src="https://love.seoul.go.kr/tmda/editor/article/2024/03/25/article_202403_07_01.jpg" alt="차이나타운">
+        
+        <div class="box">
+            <h3>1. 중화요리가 한국에 넘어온 계기</h3>
+            <p>1882년 임오군란 당시 청나라 군대와 함께 상인들이 들어왔고, 1883년 인천 제물포항이 개항하며 청나라 조계지가 형성되었습니다. 이때 산둥성 출신의 화교들이 대거 이주하여 부두 노동자(쿨리)들을 상대로 저렴하고 빠른 식사를 제공하기 시작한 것이 한국 중화요리의 시발점입니다.</p>
+        </div>
+        <div class="box">
+            <h3>2. 한국식 중화요리의 탄생</h3>
+            <p>초기에는 중국식 '작장면' 등 본토의 맛을 유지했으나, 점차 한국인의 입맛에 맞춰 진화했습니다. 짠맛이 강한 된장 대신 달콤한 캐러멜을 섞은 '춘장'을 개발해 짜장면을 만들었고, 일본의 하얀 '초마면'에 고춧가루를 넣어 한국식 얼큰한 짬뽕을 탄생시켰습니다.</p>
+        </div>
+        <div class="box">
+            <h3>3. 중화요리의 주요 요리 방식</h3>
+            <p>한국식 중화요리의 핵심은 '웍(Wok)'과 '고화력'입니다. 센 불에 빠르게 볶아내는 초(炒)와 폭(爆), 기름에 튀기는 사(炸), 전분을 풀어 걸쭉하게 만드는 류(溜) 등 다채로운 조리법을 사용하여 식재료의 식감을 살리고 특유의 '불맛(Wok Hei)'을 입힙니다.</p>
+        </div>
+        <div class="box">
+            <h3>4. 한국식 중화요리의 인식 (청요리에서 소울푸드로)</h3>
+            <p>1970년대 이전까지 중화요리는 '청요리'라 불리며 특별한 날에만 먹는 고급 외식이었습니다. 하지만 혼분식 장려 운동과 철가방 배달 문화가 결합되면서, 현재는 졸업식, 이삿날, 당구장 등 한국인의 삶의 애환을 함께하는 부동의 '소울푸드'로 자리 잡았습니다.</p>
+        </div>
+        <div class="box">
+            <h3>5. 중화요리의 미래 전망</h3>
+            <p>최근에는 기존의 짜장, 짬뽕을 넘어 마라탕, 훠궈, 딤섬 등 중국 본토의 다양한 지역 요리(Regional Cuisine)가 유입되며 스펙트럼이 넓어지고 있습니다. 또한, 호텔 다이닝 중심의 프리미엄화와 배달 앱을 통한 푸드테크의 결합으로 새로운 전성기를 맞이하고 있습니다.</p>
+        </div>
     </div>
 </body>
 </html>
