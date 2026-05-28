@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chinesische Küche - 상세 재료 안내</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #2C1E16; --accent: #D62828; --bg: #FDFBF7; --text: #333333; }
+        body { margin: 0; font-family: 'Noto Sans KR', sans-serif; background-color: var(--bg); color: var(--text); }
+        a { text-decoration: none; color: inherit; }
+        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 50px; background: #ffffff; }
+        .logo { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 900; color: var(--primary); }
+        .logo span { color: var(--accent); }
+        .nav-menu { display: flex; gap: 40px; font-weight: 700; }
+        
+        .container { padding: 60px 20px; max-width: 800px; margin: 0 auto; }
+        .back-link { display: inline-block; margin-bottom: 30px; color: var(--accent); font-weight: bold; }
+        
+        .ingredient-box { background: white; padding: 40px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); margin-bottom: 40px; scroll-margin-top: 100px;}
+        .ingredient-box h2 { color: var(--primary); border-left: 5px solid var(--accent); padding-left: 15px; margin-top: 0; }
+        .ingredient-list { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px; }
+        .ing-item { background: #f9f9f9; padding: 15px; border-radius: 8px; border: 1px solid #eee; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Chinesische <span>Küche</span></div>
+        <nav class="nav-menu">
+            <a href="index.html">중화요리</a>
+            <a href="menu.html">메뉴소개</a>
+            <a href="spots.html">주변 맛집</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <a href="menu.html" class="back-link">&larr; 전체 메뉴판으로 돌아가기</a>
+        
+        <div class="ingredient-box" id="jjajang">
+            <h2>짜장면 핵심 식재료</h2>
+            <div class="ingredient-list">
+                <div class="ing-item"><strong>춘장 (일품 블랙 소스):</strong> 깊은 감칠맛의 뼈대</div>
+                <div class="ing-item"><strong>국내산 한돈 생고기:</strong> 고소한 육즙과 식감</div>
+                <div class="ing-item"><strong>무안 햇양파:</strong> 수분과 자연스러운 단맛</div>
+                <div class="ing-item"><strong>수타 생면:</strong> 소스가 잘 베는 쫄깃한 면발</div>
+            </div>
+        </div>
+
+        <div class="ingredient-box" id="jjamppong">
+            <h2>짬뽕 핵심 식재료</h2>
+            <div class="ingredient-list">
+                <div class="ing-item"><strong>고춧가루 & 대파 기름:</strong> 칼칼하고 깊은 불향의 베이스</div>
+                <div class="ing-item"><strong>신선한 오징어/홍합:</strong> 국물의 시원한 바다 맛 담당</div>
+                <div class="ing-item"><strong>알배추 & 청경채:</strong> 채수에서 우러나오는 깔끔한 단맛</div>
+            </div>
+        </div>
+
+        <div class="ingredient-box" id="tangsuyuk">
+            <h2>탕수육 핵심 식재료</h2>
+            <div class="ingredient-list">
+                <div class="ing-item"><strong>돼지고기 등심:</strong> 지방이 적고 담백한 부위</div>
+                <div class="ing-item"><strong>감자 전분 반죽:</strong> 바삭하고 쫄깃한 튀김옷의 비밀</div>
+                <div class="ing-item"><strong>새콤달콤 소스:</strong> 레몬, 목이버섯, 당근, 오이가 들어간 소스</div>
+            </div>
+        </div>
+        
+        <p style="text-align: center; color: #999;">나머지 고급 요리류(깐풍기, 양장피 등)도 엄선된 식재료만을 사용하여 즉석 조리됩니다.</p>
+    </div>
+
+</body>
+</html>

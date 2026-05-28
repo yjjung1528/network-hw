@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chinesische Küche - 주변 맛집</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #2C1E16; --accent: #D62828; --bg: #FDFBF7; --text: #333333; }
+        body { margin: 0; font-family: 'Noto Sans KR', sans-serif; background-color: var(--bg); color: var(--text); }
+        a { text-decoration: none; color: inherit; }
+        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 50px; background: #ffffff; }
+        .logo { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 900; color: var(--primary); }
+        .logo span { color: var(--accent); }
+        .nav-menu { display: flex; gap: 40px; font-weight: 700; }
+        
+        .container { padding: 60px 20px; max-width: 1000px; margin: 0 auto; }
+        .title { text-align: center; font-size: 2.5rem; color: var(--primary); margin-bottom: 50px; font-weight: 900; }
+        .spot-card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 25px; display: flex; gap: 30px; }
+        .spot-thumb { width: 15px; background: var(--accent); border-radius: 5px; }
+        .spot-info h3 { margin: 0 0 10px 0; color: var(--primary); font-size: 1.4rem; }
+        .spot-info p { margin: 5px 0; color: #666; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Chinesische <span>Küche</span></div>
+        <nav class="nav-menu">
+            <a href="index.html">중화요리</a>
+            <a href="menu.html">메뉴소개</a>
+            <a href="spots.html" class="active">주변 맛집</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2 class="title">우리 동네 중화요리 명가</h2>
+        
+        <div class="spot-card">
+            <div class="spot-thumb"></div>
+            <div class="spot-info">
+                <h3>대성각 (전통 수타면 전문)</h3>
+                <p>📍 위치: 학교 정문 도보 5분 거리</p>
+                <p>⭐ 주요 특징: 기계면이 아닌 직접 치는 수타면으로 짜장 소스가 겉돌지 않고 묵직하게 배어나는 것이 일품.</p>
+            </div>
+        </div>
+
+        <div class="spot-card">
+            <div class="spot-thumb"></div>
+            <div class="spot-info">
+                <h3>불맛천국 짬뽕 연구소</h3>
+                <p>📍 위치: 대학가 대학로 사거리 코너</p>
+                <p>⭐ 주요 특징: 강한 화력의 웍질로 입혀낸 진한 야채 불향과 매콤하고 칼칼한 해물 육수가 해장에 최고인 곳.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

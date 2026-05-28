@@ -3,239 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>uno sportello unico - 프리미엄 짜장</title>
+    <title>Chinesische Küche - 홈</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
     <style>
-        /* --- 색상 및 기본 설정 --- */
         :root {
-            --primary-color: #2C1E16; /* 춘장 딥 브라운 */
-            --accent-color: #D62828;  /* 식욕을 돋우는 차이나 레드 */
-            --bg-color: #FDFBF7;      /* 부드러운 면발 크림색 */
-            --text-main: #333333;
-            --text-light: #666666;
+            --primary: #2C1E16; /* 딥 브라운 */
+            --accent: #D62828;  /* 차이나 레드 */
+            --bg: #FDFBF7;      /* 크림색 */
+            --text: #333333;
         }
-
-        body {
-            margin: 0;
-            font-family: 'Noto Sans KR', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            overflow-x: hidden;
-        }
-        
+        body { margin: 0; font-family: 'Noto Sans KR', sans-serif; background-color: var(--bg); color: var(--text); }
         a { text-decoration: none; color: inherit; }
-
-        /* --- 상단 내비게이션 바 (Header) --- */
+        
+        /* 네비게이션 바 */
         header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 50px;
-            background: #ffffff;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
-            position: sticky;
-            top: 0;
-            z-index: 100;
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 20px 50px; background: #ffffff; box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            position: sticky; top: 0; z-index: 100;
         }
+        .logo { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 900; color: var(--primary); }
+        .logo span { color: var(--accent); }
+        .nav-menu { display: flex; gap: 40px; font-weight: 700; }
+        .nav-menu a { transition: 0.3s; }
+        .nav-menu a.active, .nav-menu a:hover { color: var(--accent); }
 
-        /* 왼쪽 상단 홈페이지 이름 */
-        .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            font-weight: 900;
-            color: var(--primary-color);
-            letter-spacing: -0.5px;
-        }
-        .logo span { color: var(--accent-color); }
-
-        /* 메뉴바 */
-        .nav-menu {
-            display: flex;
-            gap: 40px;
-            font-weight: 700;
-            font-size: 1.05rem;
-        }
-        .nav-menu a:hover {
-            color: var(--accent-color);
-            transition: 0.3s;
-        }
-
-        /* --- 메인 히어로 배너 --- */
+        /* 상단 중화요리 사진 배너 */
         .hero {
-            background-color: var(--primary-color);
-            color: #ffffff;
-            padding: 140px 20px;
-            text-align: center;
-            background-image: linear-gradient(rgba(44, 30, 22, 0.9), rgba(44, 30, 22, 0.9)), url('https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&q=80');
-            background-size: cover;
-            background-position: center;
+            background-color: var(--primary); color: #ffffff; padding: 140px 20px; text-align: center;
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&q=80&w=1200');
+            background-size: cover; background-position: center;
         }
-        .hero h1 {
-            font-size: 4rem;
-            margin: 0 0 20px 0;
-            font-family: 'Playfair Display', serif;
-        }
-        .hero p {
-            font-size: 1.3rem;
-            opacity: 0.9;
-            font-weight: 400;
-        }
+        .hero h1 { font-size: 3.5rem; margin: 0 0 20px 0; font-family: 'Playfair Display', serif; }
+        .hero p { font-size: 1.3rem; opacity: 0.9; }
 
-        /* --- 공통 섹션 스타일 --- */
-        section {
-            padding: 100px 20px;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin-bottom: 15px;
-            font-weight: 900;
-        }
-        .section-subtitle {
-            text-align: center;
-            color: var(--text-light);
-            font-size: 1.1rem;
-            margin-bottom: 60px;
-        }
-
-        /* --- 1. 짜장 소개 (2단 분할 레이아웃) --- */
-        .grid-2 {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
-        }
-        .intro-text h3 {
-            font-size: 1.8rem;
-            color: var(--accent-color);
-            margin-bottom: 20px;
-        }
-        .intro-text p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: var(--text-light);
-            margin-bottom: 20px;
-        }
-        .image-placeholder {
-            background: #E8E3D9;
-            border-radius: 20px;
-            height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #A39C89;
-            font-weight: bold;
-            font-size: 1.2rem;
-            border: 2px dashed #C5BEAD;
-        }
-
-        /* --- 2. 짜장 재료 (3단 카드 레이아웃) --- */
-        .ingredients-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-        }
-        .card {
-            background: #ffffff;
-            padding: 40px 30px;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            transition: transform 0.3s;
-        }
-        .card:hover {
-            transform: translateY(-10px);
-        }
-        .card-icon {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
-        .card h4 {
-            font-size: 1.4rem;
-            color: var(--primary-color);
-            margin-bottom: 15px;
-        }
-        .card p {
-            color: var(--text-light);
-            line-height: 1.6;
-        }
-
-        /* --- 푸터 (하단 바) --- */
-        footer {
-            background: var(--primary-color);
-            color: rgba(255,255,255,0.6);
-            text-align: center;
-            padding: 40px 20px;
-            margin-top: 50px;
-            font-size: 0.9rem;
-        }
+        /* 본문 내용 */
+        section { padding: 80px 20px; max-width: 900px; margin: 0 auto; line-height: 1.8; }
+        .section-title { text-align: center; font-size: 2.5rem; color: var(--primary); margin-bottom: 40px; font-weight: 900; }
+        .intro-img { width: 100%; height: 400px; object-fit: cover; border-radius: 15px; margin-bottom: 30px; }
+        p { font-size: 1.1rem; color: #555; margin-bottom: 25px; }
+        
+        footer { background: var(--primary); color: rgba(255,255,255,0.6); text-align: center; padding: 30px; font-size: 0.9rem; }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo">uno sportello <span>unico</span></div>
+        <div class="logo">Chinesische <span>Küche</span></div>
         <nav class="nav-menu">
-            <a href="#intro">짜장 소개</a>
-            <a href="#ingredients">짜장 재료</a>
-            <a href="#">메뉴 안내</a>
-            <a href="#">오시는 길</a>
+            <a href="index.html" class="active">중화요리</a>
+            <a href="menu.html">메뉴소개</a>
+            <a href="spots.html">주변 맛집</a>
         </nav>
     </header>
 
     <div class="hero">
-        <h1>Perfect Jjajang</h1>
-        <p>세상에 단 하나뿐인 완벽한 짜장면을 만나는 창구</p>
+        <h1>Chinesische Küche</h1>
+        <p>한국인의 취향에 맞게 현지화된 중화요리</p>
     </div>
 
-    <section id="intro">
-        <h2 class="section-title">짜장 소개</h2>
-        <p class="section-subtitle">전통의 맛을 현대적으로 재해석하다</p>
+    <section>
+        <h2 class="section-title">중화요리의 유래와 문화</h2>
+        <img src="https://images.unsplash.com/photo-1525755662778-989d0524087e?auto=format&fit=crop&q=80&w=800" class="intro-img" alt="중화요리">
         
-        <div class="grid-2">
-            <div class="intro-text">
-                <h3>오직 한 그릇을 위한 타협 없는 고집</h3>
-                <p>
-                    'uno sportello unico(단 하나의 창구)'라는 이름처럼, 저희는 고객님께 완벽한 중식 경험을 제공하는 유일한 목적지가 되고자 합니다.
-                </p>
-                <p>
-                    수백 번의 웍질 끝에 탄생하는 불향 가득한 춘장, 매일 아침 직접 반죽하여 뽑아내는 쫄깃한 생면. 평범한 짜장면이 아닌, 기억에 남는 하나의 요리를 대접합니다.
-                </p>
-            </div>
-            <div class="image-placeholder">
-                [ 먹음직스러운 짜장면 조리 사진 자리 ]
-            </div>
-        </div>
-    </section>
+        <h3>1. 한국식 중화요리의 탄생</h3>
+        <p>
+            한국의 중화요리는 19세기 후반 임오군란 이후 인천 개항장을 중심으로 이주한 중국 산둥성 출신의 화교들에 의해 시작되었습니다. 이들은 부두 노동자들을 대상으로 저렴하고 빠르게 먹을 수 있는 음식을 개발했는데, 이것이 오늘날 한국식 중화요리의 시초입니다.
+        </p>
 
-    <section id="ingredients">
-        <h2 class="section-title">짜장 재료</h2>
-        <p class="section-subtitle">최상의 맛은 가장 신선한 식재료에서 시작됩니다</p>
-
-        <div class="ingredients-grid">
-            <div class="card">
-                <div class="card-icon">🥩</div>
-                <h4>1등급 한돈</h4>
-                <p>냉동육이 아닌 매일 아침 들여오는 신선한 1등급 국내산 생돼지고기만을 큼직하게 썰어 넣어 풍부한 육즙을 자랑합니다.</p>
-            </div>
-            <div class="card">
-                <div class="card-icon">🧅</div>
-                <h4>무안 햇양파</h4>
-                <p>단맛이 강하고 수분이 풍부한 무안산 햇양파를 센 불에 빠르게 볶아내어 춘장의 짠맛을 중화하고 자연스러운 감칠맛을 냅니다.</p>
-            </div>
-            <div class="card">
-                <div class="card-icon">🫘</div>
-                <h4>숙성 춘장</h4>
-                <p>일반 춘장이 아닌 100일 이상 저온 숙성시킨 특제 비법 춘장을 사용하여, 텁텁함 없이 깊고 진한 풍미를 완성합니다.</p>
-            </div>
-        </div>
+        <h3>2. 어떻게 만들어졌는가 (현지화 과정)</h3>
+        <p>
+            본래 중국 전통 요리는 강한 향신료와 기름진 맛이 특징이지만, 한국에 정착하면서 한국인의 입맛에 부합하도록 진화했습니다. 대표적으로 중국 산둥식 짜장면의 짠맛을 줄이고 캐러멜 성분을 더해 달콤하고 촉촉하게 만든 '한국식 짜장면'과, 탕채 요리를 한국식 고기튀김 문화에 접목한 '탕수육'이 그 증거입니다.
+        </p>
     </section>
 
     <footer>
-        &copy; 2026 uno sportello unico. All rights reserved. | 대표자: 창원시 1등 셰프
+        &copy; 2026 Chinesische Küche. 미니프로젝트 과제 제출용
     </footer>
 
 </body>
