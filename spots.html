@@ -2,28 +2,96 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>주변 맛집 - Chinesische Küche</title>
+    <title>Chinesische Küche - 주변 맛집</title>
     <style>
-        body { margin: 0; font-family: 'Malgun Gothic', sans-serif; background: #111; color: #fff; }
+        body { margin: 0; font-family: 'Malgun Gothic', sans-serif; background: #111; color: #fff; overflow-x: hidden; }
         a { text-decoration: none; color: inherit; }
         header { display: flex; justify-content: space-between; align-items: center; padding: 20px 60px; background: #000; border-bottom: 1px solid #D62828; }
         .logo { font-size: 2rem; font-weight: bold; color: #fff; } .logo span { color: #D62828; }
-        nav { display: flex; gap: 40px; font-weight: bold; } nav a.active { color: #D62828; }
+        nav { display: flex; gap: 40px; font-weight: bold; } nav a:hover { color: #D62828; } nav a.active { color: #D62828; }
+        
         .container { max-width: 900px; margin: 60px auto; padding: 0 20px; }
-        .spot-card { background: #1a1a1a; padding: 30px; border-radius: 15px; margin-bottom: 25px; border-left: 5px solid #D62828; border-top: 1px solid #333; border-right: 1px solid #333; border-bottom: 1px solid #333; }
-        .spot-card h3 { margin-top: 0; color: #D62828; font-size: 1.5rem; }
-        .spot-card p { color: #ddd; }
+        h1 { text-align: center; margin-bottom: 50px; color: #fff; font-size: 2.5rem; }
+        
+        /* 맛집 카드 디자인 */
+        .spot-card { 
+            background: #1a1a1a; 
+            padding: 30px; 
+            border-radius: 15px; 
+            margin-bottom: 30px; 
+            border-left: 5px solid #D62828; 
+            border-top: 1px solid #333; 
+            border-right: 1px solid #333; 
+            border-bottom: 1px solid #333; 
+            transition: 0.3s; 
+        }
+        .spot-card:hover { 
+            transform: translateY(-5px); 
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5); 
+        }
+        .spot-card h3 { margin-top: 0; color: #D62828; font-size: 1.6rem; margin-bottom: 15px; }
+        .spot-card p { color: #ddd; margin: 12px 0; line-height: 1.6; font-size: 1.05rem; }
+        
+        /* 텍스트 링크 스타일 */
+        .spot-link { 
+            color: #D62828; 
+            font-weight: bold; 
+            text-decoration: underline; 
+            transition: 0.2s; 
+        }
+        .spot-link:hover { 
+            color: #fff; 
+        }
     </style>
 </head>
 <body>
     <header>
         <a href="index.html" class="logo">Chinesische <span>Küche</span></a>
-        <nav><a href="history.html">중화요리</a><a href="menu.html">메뉴소개</a><a href="spots.html" style="color:var(--accent)">주변 맛집</a></nav>
+        <nav>
+            <a href="history.html">중화요리</a>
+            <a href="menu.html">메뉴소개</a>
+            <a href="spots.html" class="active">주변 맛집</a>
+        </nav>
     </header>
+    
     <div class="container">
-        <h1 style="text-align: center; margin-bottom: 50px;">내 주변 중화요리 맛집</h1>
-        <div class="spot-card"><h3>대성루 (전통 수타면 전문)</h3><p>📍 위치: 학교 정문 도보 5분 거리</p><p>⭐ 특징: 사장님이 직접 치는 수타면의 쫄깃함이 일품입니다.</p></div>
-        <div class="spot-card"><h3>홍콩반점 (가성비 최고)</h3><p>📍 위치: 시내 중앙 사거리</p><p>⭐ 특징: 불맛 가득한 짬뽕과 얇은 단무지의 조화가 완벽합니다.</p></div>
+        <h1>경남대 주변 중화요리 맛집</h1>
+        
+        <div class="spot-card">
+            <h3>금향</h3>
+            <p>📍 위치: 학교 정문 도보 10분(570M)</p>
+            <p>⭐ 특징: '이 가격에 이 양이?'라는 소리가 절로 나오는 압도적인 가성비! 푸짐한 해물 쟁반짜장이 가장 유명한 웨이팅 맛집입니다.</p>
+            <p>🔗 링크: <a href="https://naver.me/FafyRpWE" target="_blank" class="spot-link">클릭하여 지도 보기</a></p>
+        </div>
+
+        <div class="spot-card">
+            <h3>보배반점</h3>
+            <p>📍 위치: 학교 정문 도보 1분(20M)</p>
+            <p>⭐ 특징: 깔끔하고 트렌디한 인테리어 속에서 즐기는 진한 소고기 짬뽕과 불맛 가득한 요리들이 일품인 모던 프리미엄 중식당입니다.</p>
+            <p>🔗 링크: <a href="https://naver.me/5RhLiZEC" target="_blank" class="spot-link">클릭하여 지도 보기</a></p>
+        </div>
+
+        <div class="spot-card">
+            <h3>신과 함께</h3>
+            <p>📍 위치: 학교 정문 도보 15분(790M)</p>
+            <p>⭐ 특징: 학생들의 입맛을 제대로 저격한 트렌디한 감성! 얼큰하면서도 감칠맛 나는 국물 요리가 인상적인 분위기 좋은 중식점입니다.</p>
+            <p>🔗 링크: <a href="https://naver.me/Gdyc6zJD" target="_blank" class="spot-link">클릭하여 지도 보기</a></p>
+        </div>
+
+        <div class="spot-card">
+            <h3>송학관</h3>
+            <p>📍 위치: 학교 정문 도보 5분(230M)</p>
+            <p>⭐ 특징: 오랫동안 묵묵히 자리를 지켜온 동네 터줏대감 같은 노포. 화려한 기교보다는 기본에 충실한 옛날식 짜장과 짬뽕의 깊은 맛을 느낄 수 있습니다.</p>
+            <p>🔗 링크: <a href="https://naver.me/56RHEBKJ" target="_blank" class="spot-link">클릭하여 지도 보기</a></p>
+        </div>
+
+        <div class="spot-card">
+            <h3>홍콩반점0410</h3>
+            <p>📍 위치: 학교 정문 도보 5분(230m)</p>
+            <p>⭐ 특징: 진한 짬뽕 국물과 불맛 가득한 볶음짬뽕으로 꾸준히 사랑받는 중식 프랜차이즈입니다.</p>
+            <p>🔗 링크: <a href="https://naver.me/GiacMQz1" target="_blank" class="spot-link">클릭하여 지도 보기</a></p>
+        </div>
+
     </div>
 </body>
 </html>
