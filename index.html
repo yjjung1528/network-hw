@@ -6,16 +6,10 @@
     <title>Chinesische Küche - 홈</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary: #2C1E16; /* 딥 브라운 */
-            --accent: #D62828;  /* 차이나 레드 */
-            --bg: #FDFBF7;      /* 크림색 */
-            --text: #333333;
-        }
+        :root { --primary: #2C1E16; --accent: #D62828; --bg: #FDFBF7; --text: #333333; }
         body { margin: 0; font-family: 'Noto Sans KR', sans-serif; background-color: var(--bg); color: var(--text); }
         a { text-decoration: none; color: inherit; }
         
-        /* 네비게이션 바 */
         header {
             display: flex; justify-content: space-between; align-items: center;
             padding: 20px 50px; background: #ffffff; box-shadow: 0 2px 15px rgba(0,0,0,0.05);
@@ -24,25 +18,17 @@
         .logo { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 900; color: var(--primary); }
         .logo span { color: var(--accent); }
         .nav-menu { display: flex; gap: 40px; font-weight: 700; }
-        .nav-menu a { transition: 0.3s; }
-        .nav-menu a.active, .nav-menu a:hover { color: var(--accent); }
+        .nav-menu a:hover { color: var(--accent); transition: 0.3s; }
 
-        /* 상단 중화요리 사진 배너 */
         .hero {
-            background-color: var(--primary); color: #ffffff; padding: 140px 20px; text-align: center;
-            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&q=80&w=1200');
-            background-size: cover; background-position: center;
+            background-color: var(--primary); color: #ffffff; padding: 180px 20px; text-align: center;
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&q=80&w=1200');
+            background-size: cover; background-position: center; min-height: 40vh; display: flex; flex-direction: column; justify-content: center; align-items: center;
         }
-        .hero h1 { font-size: 3.5rem; margin: 0 0 20px 0; font-family: 'Playfair Display', serif; }
-        .hero p { font-size: 1.3rem; opacity: 0.9; }
-
-        /* 본문 내용 */
-        section { padding: 80px 20px; max-width: 900px; margin: 0 auto; line-height: 1.8; }
-        .section-title { text-align: center; font-size: 2.5rem; color: var(--primary); margin-bottom: 40px; font-weight: 900; }
-        .intro-img { width: 100%; height: 400px; object-fit: cover; border-radius: 15px; margin-bottom: 30px; }
-        p { font-size: 1.1rem; color: #555; margin-bottom: 25px; }
+        .hero h1 { font-size: 4rem; margin: 0 0 20px 0; font-family: 'Playfair Display', serif; }
+        .hero p { font-size: 1.5rem; opacity: 0.9; font-weight: 400; }
         
-        footer { background: var(--primary); color: rgba(255,255,255,0.6); text-align: center; padding: 30px; font-size: 0.9rem; }
+        footer { background: var(--primary); color: rgba(255,255,255,0.6); text-align: center; padding: 40px; font-size: 0.9rem; position: fixed; bottom: 0; width: 100%; box-sizing: border-box; }
     </style>
 </head>
 <body>
@@ -50,7 +36,7 @@
     <header>
         <div class="logo">Chinesische <span>Küche</span></div>
         <nav class="nav-menu">
-            <a href="index.html" class="active">중화요리</a>
+            <a href="history.html">중화요리</a>
             <a href="menu.html">메뉴소개</a>
             <a href="spots.html">주변 맛집</a>
         </nav>
@@ -60,21 +46,6 @@
         <h1>Chinesische Küche</h1>
         <p>한국인의 취향에 맞게 현지화된 중화요리</p>
     </div>
-
-    <section>
-        <h2 class="section-title">중화요리의 유래와 문화</h2>
-        <img src="https://images.unsplash.com/photo-1525755662778-989d0524087e?auto=format&fit=crop&q=80&w=800" class="intro-img" alt="중화요리">
-        
-        <h3>1. 한국식 중화요리의 탄생</h3>
-        <p>
-            한국의 중화요리는 19세기 후반 임오군란 이후 인천 개항장을 중심으로 이주한 중국 산둥성 출신의 화교들에 의해 시작되었습니다. 이들은 부두 노동자들을 대상으로 저렴하고 빠르게 먹을 수 있는 음식을 개발했는데, 이것이 오늘날 한국식 중화요리의 시초입니다.
-        </p>
-
-        <h3>2. 어떻게 만들어졌는가 (현지화 과정)</h3>
-        <p>
-            본래 중국 전통 요리는 강한 향신료와 기름진 맛이 특징이지만, 한국에 정착하면서 한국인의 입맛에 부합하도록 진화했습니다. 대표적으로 중국 산둥식 짜장면의 짠맛을 줄이고 캐러멜 성분을 더해 달콤하고 촉촉하게 만든 '한국식 짜장면'과, 탕채 요리를 한국식 고기튀김 문화에 접목한 '탕수육'이 그 증거입니다.
-        </p>
-    </section>
 
     <footer>
         &copy; 2026 Chinesische Küche. 미니프로젝트 과제 제출용

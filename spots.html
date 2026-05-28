@@ -9,10 +9,11 @@
         :root { --primary: #2C1E16; --accent: #D62828; --bg: #FDFBF7; --text: #333333; }
         body { margin: 0; font-family: 'Noto Sans KR', sans-serif; background-color: var(--bg); color: var(--text); }
         a { text-decoration: none; color: inherit; }
-        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 50px; background: #ffffff; }
+        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 50px; background: #ffffff; box-shadow: 0 2px 15px rgba(0,0,0,0.05); }
         .logo { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 900; color: var(--primary); }
         .logo span { color: var(--accent); }
         .nav-menu { display: flex; gap: 40px; font-weight: 700; }
+        .nav-menu a.active { color: var(--accent); }
         
         .container { padding: 60px 20px; max-width: 1000px; margin: 0 auto; }
         .title { text-align: center; font-size: 2.5rem; color: var(--primary); margin-bottom: 50px; font-weight: 900; }
@@ -27,7 +28,7 @@
     <header>
         <div class="logo">Chinesische <span>Küche</span></div>
         <nav class="nav-menu">
-            <a href="index.html">중화요리</a>
+            <a href="history.html">중화요리</a>
             <a href="menu.html">메뉴소개</a>
             <a href="spots.html" class="active">주변 맛집</a>
         </nav>
