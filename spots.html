@@ -4,16 +4,15 @@
     <meta charset="UTF-8">
     <title>주변 맛집 - Chinesische Küche</title>
     <style>
-        :root { --primary: #2C1E16; --accent: #D62828; --bg: #FDFBF7; }
-        body { margin: 0; font-family: 'Noto Sans KR', sans-serif; background-color: var(--bg); }
-        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 60px; background: #fff; }
-        .logo { font-size: 1.8rem; font-weight: 900; color: var(--primary); text-decoration: none; }
-        .logo span { color: var(--accent); }
-        nav a { margin-left: 40px; text-decoration: none; font-weight: 700; color: var(--primary); }
+        body { margin: 0; font-family: 'Malgun Gothic', sans-serif; background: #111; color: #fff; }
+        a { text-decoration: none; color: inherit; }
+        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 60px; background: #000; border-bottom: 1px solid #D62828; }
+        .logo { font-size: 2rem; font-weight: bold; color: #fff; } .logo span { color: #D62828; }
+        nav { display: flex; gap: 40px; font-weight: bold; } nav a.active { color: #D62828; }
         .container { max-width: 900px; margin: 60px auto; padding: 0 20px; }
-        .spot-card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 25px; border-left: 8px solid var(--accent); }
-        h3 { margin: 0 0 10px 0; color: var(--primary); }
-        p { margin: 5px 0; color: #666; }
+        .spot-card { background: #1a1a1a; padding: 30px; border-radius: 15px; margin-bottom: 25px; border-left: 5px solid #D62828; border-top: 1px solid #333; border-right: 1px solid #333; border-bottom: 1px solid #333; }
+        .spot-card h3 { margin-top: 0; color: #D62828; font-size: 1.5rem; }
+        .spot-card p { color: #ddd; }
     </style>
 </head>
 <body>
